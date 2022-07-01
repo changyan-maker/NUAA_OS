@@ -1,0 +1,38 @@
+# T3.c
+
++ 此题与平时作业的 sh 功能一致
+  * 使用了不同的数据结构
+  * 考察是否理解了树形结构表达的意义
+
++ 实现复杂命令 
+  * cat </etc/passwd | grep >log
+
++ 先不用修改代码，编译运行，输出
+
+```
+pipe
+  redirect
+    basic
+      cat
+    <
+    /etc/passwd
+  redirect
+    basic
+      grep root
+    >
+    log
+```
+
++ 阅读已经给的代码
+  * 理解其数据结构
+  * 理解 tree_dump()
+  * 完成 tree_exec()
+
++ 提示
+  - 父类
+    * struct tree
+    * 只有一个字段 type
+  - 子类
+    * struct basic_tree
+    * struct redirect_tree
+    * struct pipe_tree

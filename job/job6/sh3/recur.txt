@@ -1,0 +1,28 @@
+struct command {
+    int argc;
+    char *argv[MAX_ARG];
+    char *input;
+    char *output;
+};
+           fd_array[1]
+cmdA | cmdB | cmdC
+    fd_array[0]
+struct command commands[3];
+int commandc;
+
+void parse_pipe_command()
+{
+}
+
+void execute_pipe_command()
+{
+    int i;
+    int fd_array[2][2];
+
+    for (i = 0; i < 3; i++) {
+        pid = fork();
+        if (pid == 0) {
+        }
+    }
+}
+

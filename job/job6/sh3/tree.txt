@@ -1,0 +1,13 @@
+echo abc | grep b >log
+
+pipe
+  basic
+    echo
+    abc
+  redirect
+    basic
+      grep
+      b
+    >
+    log
+
